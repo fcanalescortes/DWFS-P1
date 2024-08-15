@@ -42,7 +42,7 @@ Algoritmo sistemaDeCostos
 		//Aplicar descuento por cantidad	
 		descuento<-IVAaplicado-(IVAaplicado*descuentoPorCantidad)
 		
-		Escribir "Veamos si tienes otro regalo, Por favor indícanos la cantidad de Productos que vas comprar: "
+		Escribir "¡Veamos si tienes otro regalo!, Por favor indícanos la cantidad de Productos que vas comprar: "
 		Leer Cantidad
 		
 		Si cantidad>=2 Entonces
@@ -69,6 +69,4 @@ Algoritmo sistemaDeCostos
 		
 	FinPara
 	
-FinAlgoritmo
-
 FinAlgoritmo
