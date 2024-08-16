@@ -46,26 +46,40 @@ Algoritmo sistemaDeCostos
 		Leer Cantidad
 		
 		Si cantidad>=2 Entonces
-			Escribir "¡Llevas 2 pares! Te aplicaremos un descuento de 5%, y cada producto te queda en un valor de $", descuento
+			Escribir "¡Llevas 2 pares o más! Te aplicaremos un descuento de 5%, y cada producto te queda en un valor de $", descuento
+			Escribir "Ahora, indícanos el destino de tu producto: "
+			Leer destino
+			//calcular costo de envío	
+			envio<-costoEnvio+(valorPeso*peso)
+			
+			//calculo del precio final 	
+			precioFinal<-(descuento*zapatos)+envio
+			
+			Escribir "*************RESUMEN DE TU COMPRA*************"
+			Escribir "Valor inicial del producto: $", precioOriginal[i]
+			Escribir "Valor con descuento: $", precioInicial
+			Escribir "Valor con IVA: $", IVAaplicado
+			Escribir "Descuento aplicado por cantidad: $", descuento
+			Escribir "Costo de envío: $", envio
+			Escribir "Valor Final: $", precioFinal
 		SiNo
-			Escribir "¡Llevas 1 par! De momento, solo aplicaremos el cupón del 10%. Tu producto queda en un valor de $", IVAaplicado 
+			Escribir "¡Llevas 1 par! De momento, solo aplicaremos el cupón del 10%. Tu producto queda en un valor de $", precioInicial
+			Escribir "Ahora, indícanos el destino de tu producto: "
+			Leer destino
+			//calcular costo de envío	
+			envio<-costoEnvio+(valorPeso*peso)
+			
+			//calculo del precio final 	
+			precioFinal<-(IVAaplicado*zapatos)+envio
+			
+			Escribir "*************RESUMEN DE TU COMPRA*************"
+			Escribir "Valor inicial del producto: $", precioOriginal[i]
+			Escribir "Valor con descuento: $", precioInicial
+			Escribir "Valor con IVA: $", IVAaplicado
+			Escribir "Descuento aplicado por cantidad: $", descuento
+			Escribir "Costo de envío: $", envio
+			Escribir "Valor Final: $", precioFinal
 		Fin Si
-		
-		Escribir "Ahora, indícanos el destino de tu producto: "
-		Leer destino
-		//calcular costo de envío	
-		envio<-costoEnvio+(valorPeso*peso)
-		
-		//calculo del precio final 	
-		precioFinal<-(descuento*zapatos)+envio
-		
-		Escribir "*************RESUMEN DE TU COMPRA*************"
-		Escribir "Valor inicial del producto: $", precioOriginal[i]
-		Escribir "Valor con descuento: $", precioInicial
-		Escribir "Valor con IVA: $", IVAaplicado
-		Escribir "Descuento aplicado por cantidad: $", descuento
-		Escribir "Costo de envío: $", envio
-		Escribir "Valor Final: $", precioFinal
 		
 	FinPara
 	
